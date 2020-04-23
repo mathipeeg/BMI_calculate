@@ -3,9 +3,9 @@ package com.example.demo;
 public class User {
     private int userId;
     private String weight;
-    private int height;
+    private double height;
 
-    public User(int userId, String weight, int height) {
+    public User(int userId, String weight, double height) {
         this.userId = userId;
         this.weight = weight;
         this.height = height;
@@ -30,11 +30,11 @@ public class User {
         this.weight = weight;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 }

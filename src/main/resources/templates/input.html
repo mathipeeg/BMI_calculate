@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <title>Input</title>
+</head>
+<body class="body-input">
+<div th:replace="/fragments/header :: header"></div>
+<form id="new-user-info" th:action="@{/updateInfo}" method="post">
+    <div class="div-input-page">
+        <h2>Get your BMI here:</h2>
+        <input type="text" name="weight" placeholder="TYPE WEIGHT IN KG.G">
+        <input type="text" name="height" placeholder="TYPE HEIGHT IN CM">
+        <input id="submit-btn" type="submit" name="submit" value="SUBMIT YO">
+    </div>
+</form>
+<div class="footer">
+    <span id="footer-span">LichtDahl Co. <br> kontakt@lichtdahl.dk +4599999999 </span>
+</div>
+</body>
+</html>

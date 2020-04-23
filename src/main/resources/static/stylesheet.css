@@ -1,0 +1,222 @@
+#header-title{
+    text-align: center;
+    font-family: "Times New Roman";
+    font-size: 8rem;
+    cursor: pointer;
+    padding-bottom: 15px;
+    margin: 0px;
+}
+button{
+    background-color: mediumturquoise;
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-family: "Times New Roman";
+}
+.header-div{
+    text-align: center;
+    background-color: lavender;
+}
+button:hover{
+    /*background-color: #008CBA;*/
+    background-color: white;
+    color: black;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.div-left{
+    text-align: left;
+    /*height: 150px;*/
+    height: 9rem;
+    font-weight: bold;
+    background-color: lavenderblush;
+    /*position: absolute;*/
+    z-index: 1;
+    font-size: large;
+    float: left;
+    /*width: 46%;*/
+    padding: 1%;
+    margin-top: 20px;
+}
+.div-right{
+    text-align: left;
+    /*height: 150px;*/
+    height: 9rem;
+    font-weight: bold;
+    background-color: lavenderblush;
+    /*position: absolute;*/
+    z-index: 1;
+    font-size: large;
+    float: right;
+    width: 47%;
+    padding: 1%;
+    /*margin-right: 17px;*/
+    margin-top: 20px;
+}
+.div-left h2{
+    font-family: "Times New Roman";
+    font-weight: normal;
+    font-size: larger;
+}
+#h2-bold-left{
+    font-weight: bold;
+}
+.div-right h2{
+    font-family: "Times New Roman";
+    font-weight: normal;
+    font-size: larger;
+}
+#h2-bold-right{
+    font-weight: bold;
+}
+.container{
+    width: 80rem;
+    height: 75%;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 0;
+    border-radius: 7px;
+}
+.div-input-page {
+    height: 220px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: lavenderblush;
+    cursor: pointer;
+}
+
+.div-result-page{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    background-color: lavenderblush;
+}
+
+.div-input-page input{
+    background-color: mediumturquoise;
+    border: darkgreen;
+    color: white;
+    /*text-align: center;*/
+    text-align-all: justify;
+    text-decoration: blueviolet;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 30px;
+    cursor: text;
+    font-family: "Times New Roman";
+    padding: 20px;
+}
+.div-input-page #submit-btn{
+    background-color: mediumturquoise;
+    color: white;
+    /*text-align: center;*/
+    text-align-all: justify;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 30px;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    padding: 20px;
+}
+.div-input-page #submit-btn:hover{
+    /*background-color: #008CBA;*/
+    background-color: white;
+    color: black;
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+.div-input-page h2{
+    font-family: "Times New Roman";
+    text-align: center;
+    font-weight: normal;
+    font-size: 25px;
+    padding-top: 20px;
+}
+.div-left-what{
+    text-align: left;
+    height: auto;
+    font-weight: bold;
+    background-color: lavenderblush;
+    position: absolute;
+    z-index: 1;
+    font-size: large;
+    float: left;
+    width: 46%;
+    padding: 1%;
+    margin-top: 20px;
+}
+.div-right-what{
+    text-align: left;
+    height: auto;
+    font-weight: bold;
+    background-color: lavenderblush;
+    /*position: absolute;*/
+    z-index: 1;
+    font-size: large;
+    float: right;
+    width: 46%;
+    padding: 1%;
+    /*margin-right: 17px;*/
+    margin-top: 20px;
+}
+.div-right-what p{font-weight: lighter}
+.div-left-what p{font-weight: lighter}
+.what-is-img{
+    width: 280px;
+    height: auto;
+}
+.div-left-jokes{
+    text-align: left;
+    height: auto;
+    font-weight: bold;
+    background-color: lavenderblush;
+    position: absolute;
+    z-index: 1;
+    font-size: large;
+    float: left;
+    width: 46%;
+    padding: 1%;
+    margin-top: 20px;
+}
+.div-right-jokes{
+    text-align: left;
+    height: auto;
+    font-weight: bold;
+    background-color: lavenderblush;
+    /*position: absolute;*/
+    z-index: 1;
+    font-size: large;
+    float: right;
+    width: 46%;
+    padding: 1%;
+    margin-right: 17px;
+    margin-top: 20px;
+}
+.div-left-jokes p{font-weight: lighter}
+.div-right-jokes p{font-weight: lighter}
+
+#bmi-text{
+    font-size: 300px;
+    font-family: Calibri;
+    margin: 0px;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: dimgrey;
+    text-align: center;
+    font-size: 10px;
+    font-family: Helvetica;
+}

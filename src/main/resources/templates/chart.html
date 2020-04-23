@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/stylesheet.css">
-    <title>Your results!</title>
+    <title>Chart</title>
 </head>
 <body>
 <div th:replace="/fragments/header :: header"></div>
-<div class="div-result-page">
-    <h2>Your BMI is</h2>
-    <h3 id="bmi-text" th:text="${bmi}"></h3>
+<div style="text-align: center">
+    <img class="chart-img" src="../static/img/cartoon-body-mass-index-infographics-concept-card-vector-25206313.jpg" alt="Graphic">
 </div>
 <div class="footer">
     <span id="footer-span">LichtDahl Co. <br> kontakt@lichtdahl.dk +4599999999 </span>

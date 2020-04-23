@@ -17,25 +17,34 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(){
+        bmiService.userExists();
         return "index";
+    }
+
+    @GetMapping("/chart")
+    public String scale(){return "chart";}
+
+    @GetMapping("/what-is")
+    public String what(){
+        return "what-is";
     }
 
     @GetMapping("/input-page")
     public String input(){
-        return "input-page";
+        return "input";
     }
 
     @PostMapping("/updateInfo")
     public String updateInfo(@ModelAttribute User user){
         bmiService.updateInfo(user);
-        return "redirect:/input-page";
+        return "redirect:/result";
     }
+    @GetMapping("/jokes")
+    public String jokes(){return "jokes";}
 
     @GetMapping("/result")
     public String showResult(ModelMap model){
-        User user = bmiRepository.getUser();
-        double bmi = bmiService.calculateBMI(user);
-        model.addAttribute("bmi", bmi);
+        model.addAttribute("bmi", bmiService.calculateBMI());
         return "result";
     }
 }

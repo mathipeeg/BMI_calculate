@@ -12,22 +12,12 @@ public class BmiRepository {
     JdbcTemplate jdbc;
     SqlRowSet sqlRowSet;
 
-//    public void updateInfo(User user) {
-//        String sql = "INSERT INTO bmi_db.user (user_id, weight, height) " +
-//                "VALUES (default, ?, ?)";
-//
-//        jdbc.update(sql, preparedStatement -> {
-//            preparedStatement.setString(1, user.getWeight());
-//            preparedStatement.setInt(2, user.getHeight());
-//        });
-//    }
-
     public void updateInfo(User user){
         String sql = "UPDATE bmi_db.user SET weight=?, height=? WHERE user_id = 1";
 
         jdbc.update(sql, preparedStatement -> {
             preparedStatement.setString(1, user.getWeight());
-            preparedStatement.setInt(2, user.getHeight());
+            preparedStatement.setDouble(2, user.getHeight());
         });
     }
 
@@ -39,9 +29,20 @@ public class BmiRepository {
             return new User(
                     sqlRowSet.getInt("user_id"),
                     sqlRowSet.getString("weight"),
-                    sqlRowSet.getInt("height")
+                    sqlRowSet.getDouble("height")
             );
         }
         return null;
+    }
+
+    public void createUser() {
+        String sql = "INSERT INTO bmi_db.user (user_id, weight, height) " +
+                "VALUES (?, ?, ?)";
+
+        jdbc.update(sql, preparedStatement -> {
+            preparedStatement.setInt(1, 1);
+            preparedStatement.setString(2, "0");
+            preparedStatement.setDouble(3, 0);
+        });
     }
 }
