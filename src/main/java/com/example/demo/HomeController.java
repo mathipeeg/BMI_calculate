@@ -17,7 +17,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(){
-        bmiService.userExists();
+        //bmiService.userExists();
         return "index";
     }
 
