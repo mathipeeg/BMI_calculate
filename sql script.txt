@@ -1,9 +1,0 @@
-create schema bmi_db;
-create table user
-(
-	user_id int auto_increment,
-	weight varchar(254) not null,
-	height int not null,
-	constraint user_pk
-		primary key (user_id)
-);
