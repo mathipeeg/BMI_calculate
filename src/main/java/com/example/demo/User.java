@@ -7,8 +7,9 @@ import javax.persistence.*;
 public class User {
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column (name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+//    @Column (name = "id")
 
     @Column (name = "weight") //er IKKE krævet
     private double weight;  // SKAL være i camel-case (firstName)

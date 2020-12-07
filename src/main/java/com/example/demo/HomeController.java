@@ -24,37 +24,34 @@ public class HomeController {
 
     @RequestMapping({"/"})
     public String index(Model model){
-        Set<User> user = userService.findAll();
-        model.addAttribute("user", user);
-//        bmiService.userExists(); //todo this
         return "index";
     }
 
-    @RequestMapping({"/chart.html"})
+    @RequestMapping({"/chart"})
     public String scale(){return "chart";}
 
-    @RequestMapping({"/what-is.html"})
+    @RequestMapping({"/what-is"})
     public String what(){
         return "what-is";
     }
 
-    @RequestMapping({"/input-page.html"})
+    @RequestMapping({"/input-page"})
     public String input(){
         return "input";
     }
 
-    @RequestMapping({"/updateInfo.html"})
+    @RequestMapping({"/updateInfo"})
     public String updateInfo(@ModelAttribute User user){
         userService.save(user);
-        return "redirect:/result.html";
+        return "redirect:/result";
     }
 
-    @RequestMapping({"/jokes.html.html"})
+    @RequestMapping({"/jokes"})
     public String jokes(){return "jokes";}
 
-//    @RequestMapping({"/result.html"})
-//    public String showResult(ModelMap model){
-//        model.addAttribute("bmi", bmiService.calculateBMI()); //Todo this
-//        return "result";
-//    }
+    @RequestMapping({"/result"})
+    public String showResult(ModelMap model){
+        model.addAttribute("bmi", userService.calculateBMI());
+        return "result";
+    }
 }

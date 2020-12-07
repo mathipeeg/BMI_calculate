@@ -75,11 +75,6 @@
             <artifactId>sisu-inject-bean</artifactId>
             <version>1.4.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>5.2.9.RELEASE</version>
-        </dependency>
     </dependencies>
 
     <build>

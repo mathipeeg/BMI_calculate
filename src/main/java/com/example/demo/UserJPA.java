@@ -2,9 +2,8 @@ package com.example.demo;
 
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.text.DecimalFormat;
+import java.util.*;
 
 @Service  // den gør, at en instans fra denne klasse bliver oprettet, og
 // sat ind i OwnerController via konstruktor.
@@ -42,4 +41,12 @@ public class UserJPA implements UserService {
     public Optional<User> findById(Long aLong) {
         return userRepository.findById(aLong);
     }
+
+    @Override
+    public double calculateBMI(){
+        ArrayList<User> users = (ArrayList<User>) userRepository.findAll();
+        User user = users.get(users.size()-1);
+        DecimalFormat df = new DecimalFormat("###.##");
+        return Double.parseDouble(df.format(user.getWeight()/(user.getHeight()*user.getHeight())));
+    };
 }
