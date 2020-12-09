@@ -15,7 +15,6 @@ import java.util.Set;
 
 @Controller
 public class HomeController {
-    //Test push
 
     private UserService userService; // Spring vil selv komme med objektet hertil
 
