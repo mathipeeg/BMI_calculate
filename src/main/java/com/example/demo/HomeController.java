@@ -16,6 +16,8 @@ import java.util.Set;
 @Controller
 public class HomeController {
 
+    //casper nøs >:(
+
     private UserService userService; // Spring vil selv komme med objektet hertil
 
     public HomeController(UserService userService) {
