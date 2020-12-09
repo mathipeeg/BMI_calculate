@@ -11,8 +11,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -32,6 +31,33 @@ class DemoApplicationTests {
         assertNotNull(userService.findById((long)1));
     }
 
+
+    @Test
+    public void testSaveAndDeleteWorks(){
+        //save
+        int length_initial = userService.findAll().size();
+        User user = new User();
+        userService.save(user);
+        int length_new = userService.findAll().size();
+        assertNotEquals(length_initial, length_new);
+
+        //delete
+        userService.delete(user);
+        int length_new_2 = userService.findAll().size();
+        assertEquals(length_initial, length_new_2);
+    }
+
+    @Test
+    public void testEditFunction(){
+        Optional<User> user = userService.findById((long)1);
+        double old_weight = user.get().getWeight();
+        user.get().setWeight(100);
+
+        userService.save(user.get());
+        double new_weight = user.get().getWeight();
+        assertNotEquals(old_weight, new_weight);
+    }
+
     @Test
     public void assertCalculateReturnsNotNull(){
         assertNotNull(userService.calculateBMI());
@@ -46,5 +72,4 @@ class DemoApplicationTests {
 
         assertEquals(userService.calculateBMI(), bmi);
     }
-
 }

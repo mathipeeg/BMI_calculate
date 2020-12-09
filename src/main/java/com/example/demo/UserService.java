@@ -7,5 +7,4 @@ import java.util.List;
 @Service
 public interface UserService extends CrudService<User, Long>{
     public double calculateBMI();
-
 }
