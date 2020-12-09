@@ -50,10 +50,13 @@ class DemoApplicationTests {
     @Test
     public void testEditFunction(){
         Optional<User> user = userService.findById((long)1);
+        user.get().setWeight(10);
+        userService.save(user.get());
+
         double old_weight = user.get().getWeight();
         user.get().setWeight(100);
-
         userService.save(user.get());
+
         double new_weight = user.get().getWeight();
         assertNotEquals(old_weight, new_weight);
     }
