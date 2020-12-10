@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "user") // (name = "owners") er krævet.
 public class User {
+    //hej
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
