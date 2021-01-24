@@ -22,6 +22,9 @@ class DemoApplicationTests {
     @Autowired
     private UserRepository userRepo;
 
+    @Autowired
+    private UserJPA userJPA;
+
     @Test
     void contextLoads() {
     }
@@ -63,7 +66,7 @@ class DemoApplicationTests {
 
     @Test
     public void assertCalculateReturnsNotNull(){
-        assertNotNull(userService.calculateBMI());
+        assertNotNull(userJPA.calculateBMI());
     }
 
     @Test
@@ -73,6 +76,6 @@ class DemoApplicationTests {
         DecimalFormat df = new DecimalFormat("###.##");
         double bmi = Double.parseDouble(df.format(user.getWeight()/(user.getHeight()* user.getHeight())));
 
-        assertEquals(userService.calculateBMI(), bmi);
+        assertEquals(userJPA.calculateBMI(), bmi);
     }
 }
