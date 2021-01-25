@@ -5,12 +5,10 @@ import org.springframework.stereotype.Service;
 import java.text.DecimalFormat;
 import java.util.*;
 
-@Service  // den gør, at en instans fra denne klasse bliver oprettet, og
-// sat ind i OwnerController via konstruktor.
+@Service
 public class UserJPA implements UserService {
     private final UserRepository userRepository;
 
-    // Spring vil *selv* oprette en instans, som implementerer OwnerRepository
     public UserJPA(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
