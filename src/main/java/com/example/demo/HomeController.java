@@ -27,7 +27,7 @@ public class HomeController {
     public String index(Model model){
         return "index";
     }
-
+//kommentar
     @RequestMapping({"/chart"})
     public String scale(){return "chart";}
 
